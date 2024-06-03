@@ -1,0 +1,4 @@
+/scene version/c\<scene version="0.6.0">
+/integrator type/c\\t<integrator type="REPLACE_INTEGRATOR">\n\t\t<integer name="maxPasses" value="REPLACE_MAX_DEPTH"/>
+/<sampler type=/c\\t\t<sampler type="REPLACE_SAMPLER">
+/<integer name="sampleCount"/c\\t\t\t<integer name="sampleCount" value="REPLACE_MAX_DEPTH"/>
