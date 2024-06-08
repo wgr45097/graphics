@@ -4634,6 +4634,753 @@
       "duration_seconds": 396.965566,
       "datetime": "Tue Jun  4 12:54:00 2024",
       "retcode": 0
+    },
+    {
+      "id": "d9ef",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 1,
+      "duration_seconds": 0.760679,
+      "datetime": "Sat Jun  8 18:45:51 2024",
+      "retcode": 0
+    },
+    {
+      "id": "61eb",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 2,
+      "duration_seconds": 0.797484,
+      "datetime": "Sat Jun  8 18:45:52 2024",
+      "retcode": 0
+    },
+    {
+      "id": "0a14",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 4,
+      "duration_seconds": 0.873296,
+      "datetime": "Sat Jun  8 18:45:53 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ed18",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 8,
+      "duration_seconds": 1.013638,
+      "datetime": "Sat Jun  8 18:45:54 2024",
+      "retcode": 0
+    },
+    {
+      "id": "5c6b",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 16,
+      "duration_seconds": 1.597964,
+      "datetime": "Sat Jun  8 18:45:55 2024",
+      "retcode": 0
+    },
+    {
+      "id": "13dd",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 32,
+      "duration_seconds": 2.005835,
+      "datetime": "Sat Jun  8 18:45:57 2024",
+      "retcode": 0
+    },
+    {
+      "id": "c271",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 64,
+      "duration_seconds": 3.433209,
+      "datetime": "Sat Jun  8 18:46:01 2024",
+      "retcode": 0
+    },
+    {
+      "id": "4478",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 128,
+      "duration_seconds": 5.876366,
+      "datetime": "Sat Jun  8 18:46:07 2024",
+      "retcode": 0
+    },
+    {
+      "id": "a5ab",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 256,
+      "duration_seconds": 10.854683,
+      "datetime": "Sat Jun  8 18:46:18 2024",
+      "retcode": 0
+    },
+    {
+      "id": "02f7",
+      "scene": "matpreview",
+      "integrator": "path",
+      "n_steps": 512,
+      "duration_seconds": 21.097548,
+      "datetime": "Sat Jun  8 18:46:39 2024",
+      "retcode": 0
+    },
+    {
+      "id": "957b",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 1,
+      "duration_seconds": 0.83796,
+      "datetime": "Sat Jun  8 18:46:40 2024",
+      "retcode": 0
+    },
+    {
+      "id": "f309",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 2,
+      "duration_seconds": 0.818189,
+      "datetime": "Sat Jun  8 18:46:40 2024",
+      "retcode": 0
+    },
+    {
+      "id": "847d",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 4,
+      "duration_seconds": 1.041528,
+      "datetime": "Sat Jun  8 18:46:41 2024",
+      "retcode": 0
+    },
+    {
+      "id": "da10",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 8,
+      "duration_seconds": 1.065287,
+      "datetime": "Sat Jun  8 18:46:42 2024",
+      "retcode": 0
+    },
+    {
+      "id": "4e8f",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 16,
+      "duration_seconds": 1.349563,
+      "datetime": "Sat Jun  8 18:46:44 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ef20",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 32,
+      "duration_seconds": 1.957716,
+      "datetime": "Sat Jun  8 18:46:46 2024",
+      "retcode": 0
+    },
+    {
+      "id": "5a17",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 64,
+      "duration_seconds": 3.494135,
+      "datetime": "Sat Jun  8 18:46:49 2024",
+      "retcode": 0
+    },
+    {
+      "id": "1cb2",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 128,
+      "duration_seconds": 6.173334,
+      "datetime": "Sat Jun  8 18:46:55 2024",
+      "retcode": 0
+    },
+    {
+      "id": "5af8",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 256,
+      "duration_seconds": 11.278188,
+      "datetime": "Sat Jun  8 18:47:07 2024",
+      "retcode": 0
+    },
+    {
+      "id": "b984",
+      "scene": "matpreview",
+      "integrator": "volpath",
+      "n_steps": 512,
+      "duration_seconds": 21.917198,
+      "datetime": "Sat Jun  8 18:47:29 2024",
+      "retcode": 0
+    },
+    {
+      "id": "3fe1",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 1,
+      "duration_seconds": 0.942116,
+      "datetime": "Sat Jun  8 18:47:30 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ad2d",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 2,
+      "duration_seconds": 0.90555,
+      "datetime": "Sat Jun  8 18:47:31 2024",
+      "retcode": 0
+    },
+    {
+      "id": "d5cc",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 4,
+      "duration_seconds": 1.117653,
+      "datetime": "Sat Jun  8 18:47:32 2024",
+      "retcode": 0
+    },
+    {
+      "id": "2dc3",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 8,
+      "duration_seconds": 1.301429,
+      "datetime": "Sat Jun  8 18:47:33 2024",
+      "retcode": 0
+    },
+    {
+      "id": "fe46",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 16,
+      "duration_seconds": 1.777244,
+      "datetime": "Sat Jun  8 18:47:35 2024",
+      "retcode": 0
+    },
+    {
+      "id": "d0f8",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 32,
+      "duration_seconds": 2.801389,
+      "datetime": "Sat Jun  8 18:47:38 2024",
+      "retcode": 0
+    },
+    {
+      "id": "e7fd",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 64,
+      "duration_seconds": 4.933849,
+      "datetime": "Sat Jun  8 18:47:42 2024",
+      "retcode": 0
+    },
+    {
+      "id": "0afc",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 128,
+      "duration_seconds": 9.073479,
+      "datetime": "Sat Jun  8 18:47:52 2024",
+      "retcode": 0
+    },
+    {
+      "id": "dd30",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 256,
+      "duration_seconds": 16.957749,
+      "datetime": "Sat Jun  8 18:48:09 2024",
+      "retcode": 0
+    },
+    {
+      "id": "833d",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 512,
+      "duration_seconds": 33.527667,
+      "datetime": "Sat Jun  8 18:48:47 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ac11",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 1,
+      "duration_seconds": 1.87819,
+      "datetime": "Sat Jun  8 18:48:48 2024",
+      "retcode": 0
+    },
+    {
+      "id": "d585",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 2,
+      "duration_seconds": 1.965094,
+      "datetime": "Sat Jun  8 18:48:50 2024",
+      "retcode": 0
+    },
+    {
+      "id": "5f39",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 4,
+      "duration_seconds": 2.277606,
+      "datetime": "Sat Jun  8 18:48:53 2024",
+      "retcode": 0
+    },
+    {
+      "id": "3db9",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 8,
+      "duration_seconds": 2.481788,
+      "datetime": "Sat Jun  8 18:48:55 2024",
+      "retcode": 0
+    },
+    {
+      "id": "050d",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 1,
+      "duration_seconds": 2.217482,
+      "datetime": "Sat Jun  8 18:49:39 2024",
+      "retcode": 0
+    },
+    {
+      "id": "56d3",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 2,
+      "duration_seconds": 2.148906,
+      "datetime": "Sat Jun  8 18:49:41 2024",
+      "retcode": 0
+    },
+    {
+      "id": "f32b",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 4,
+      "duration_seconds": 2.289382,
+      "datetime": "Sat Jun  8 18:49:44 2024",
+      "retcode": 0
+    },
+    {
+      "id": "1293",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 8,
+      "duration_seconds": 2.497322,
+      "datetime": "Sat Jun  8 18:49:46 2024",
+      "retcode": 0
+    },
+    {
+      "id": "a189",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 16,
+      "duration_seconds": 3.468887,
+      "datetime": "Sat Jun  8 18:49:50 2024",
+      "retcode": 0
+    },
+    {
+      "id": "3265",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 32,
+      "duration_seconds": 4.945534,
+      "datetime": "Sat Jun  8 18:49:54 2024",
+      "retcode": 0
+    },
+    {
+      "id": "f3e4",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 64,
+      "duration_seconds": 7.337335,
+      "datetime": "Sat Jun  8 18:50:02 2024",
+      "retcode": 0
+    },
+    {
+      "id": "6bff",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 128,
+      "duration_seconds": 13.144131,
+      "datetime": "Sat Jun  8 18:50:23 2024",
+      "retcode": 0
+    },
+    {
+      "id": "2c54",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 1,
+      "duration_seconds": 1.970086,
+      "datetime": "Sat Jun  8 18:51:35 2024",
+      "retcode": 0
+    },
+    {
+      "id": "0c95",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 2,
+      "duration_seconds": 2.217064,
+      "datetime": "Sat Jun  8 18:51:37 2024",
+      "retcode": 0
+    },
+    {
+      "id": "778e",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 4,
+      "duration_seconds": 2.340894,
+      "datetime": "Sat Jun  8 18:51:39 2024",
+      "retcode": 0
+    },
+    {
+      "id": "6fe9",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 8,
+      "duration_seconds": 2.693868,
+      "datetime": "Sat Jun  8 18:51:42 2024",
+      "retcode": 0
+    },
+    {
+      "id": "5d0e",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 16,
+      "duration_seconds": 3.461253,
+      "datetime": "Sat Jun  8 18:51:45 2024",
+      "retcode": 0
+    },
+    {
+      "id": "d934",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 32,
+      "duration_seconds": 4.897629,
+      "datetime": "Sat Jun  8 18:51:50 2024",
+      "retcode": 0
+    },
+    {
+      "id": "5a98",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 64,
+      "duration_seconds": 7.489389,
+      "datetime": "Sat Jun  8 18:51:58 2024",
+      "retcode": 0
+    },
+    {
+      "id": "c79f",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 128,
+      "duration_seconds": 13.464445,
+      "datetime": "Sat Jun  8 18:52:24 2024",
+      "retcode": 0
+    },
+    {
+      "id": "85af",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 256,
+      "duration_seconds": 25.037118,
+      "datetime": "Sat Jun  8 18:52:49 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ac22",
+      "scene": "matpreview",
+      "integrator": "pssmlt",
+      "n_steps": 512,
+      "duration_seconds": 47.822111,
+      "datetime": "Sat Jun  8 18:53:37 2024",
+      "retcode": 0
+    },
+    {
+      "id": "e596",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 1,
+      "duration_seconds": 1.889967,
+      "datetime": "Sat Jun  8 18:53:39 2024",
+      "retcode": 0
+    },
+    {
+      "id": "e909",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 2,
+      "duration_seconds": 2.141323,
+      "datetime": "Sat Jun  8 18:53:41 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ae08",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 4,
+      "duration_seconds": 1.985799,
+      "datetime": "Sat Jun  8 18:53:43 2024",
+      "retcode": 0
+    },
+    {
+      "id": "ad4b",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 8,
+      "duration_seconds": 2.329646,
+      "datetime": "Sat Jun  8 18:53:45 2024",
+      "retcode": 0
+    },
+    {
+      "id": "a1c4",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 16,
+      "duration_seconds": 2.581492,
+      "datetime": "Sat Jun  8 18:53:48 2024",
+      "retcode": 0
+    },
+    {
+      "id": "2f0d",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 32,
+      "duration_seconds": 1.52991,
+      "datetime": "Sat Jun  8 18:53:49 2024",
+      "retcode": 0
+    },
+    {
+      "id": "cbfb",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 64,
+      "duration_seconds": 1.525928,
+      "datetime": "Sat Jun  8 18:53:51 2024",
+      "retcode": 0
+    },
+    {
+      "id": "30c1",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 128,
+      "duration_seconds": 1.769334,
+      "datetime": "Sat Jun  8 18:53:52 2024",
+      "retcode": 0
+    },
+    {
+      "id": "d91d",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 256,
+      "duration_seconds": 2.601984,
+      "datetime": "Sat Jun  8 18:53:55 2024",
+      "retcode": 0
+    },
+    {
+      "id": "70d6",
+      "scene": "matpreview",
+      "integrator": "mlt",
+      "n_steps": 512,
+      "duration_seconds": 1.960078,
+      "datetime": "Sat Jun  8 18:53:57 2024",
+      "retcode": 0
+    },
+    {
+      "id": "66a9",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 1,
+      "duration_seconds": 4.93113,
+      "datetime": "Sat Jun  8 18:54:02 2024",
+      "retcode": 0
+    },
+    {
+      "id": "1870",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 2,
+      "duration_seconds": 5.085981,
+      "datetime": "Sat Jun  8 18:54:07 2024",
+      "retcode": 0
+    },
+    {
+      "id": "2b57",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 4,
+      "duration_seconds": 5.15299,
+      "datetime": "Sat Jun  8 18:54:12 2024",
+      "retcode": 0
+    },
+    {
+      "id": "8124",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 8,
+      "duration_seconds": 5.317392,
+      "datetime": "Sat Jun  8 18:54:18 2024",
+      "retcode": 0
+    },
+    {
+      "id": "382d",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 16,
+      "duration_seconds": 4.821443,
+      "datetime": "Sat Jun  8 18:54:22 2024",
+      "retcode": 0
+    },
+    {
+      "id": "0430",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 32,
+      "duration_seconds": 7.284719,
+      "datetime": "Sat Jun  8 18:54:30 2024",
+      "retcode": 0
+    },
+    {
+      "id": "caa9",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 64,
+      "duration_seconds": 9.710037,
+      "datetime": "Sat Jun  8 18:54:39 2024",
+      "retcode": 0
+    },
+    {
+      "id": "50e8",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 128,
+      "duration_seconds": 14.117309,
+      "datetime": "Sat Jun  8 18:54:54 2024",
+      "retcode": 0
+    },
+    {
+      "id": "1e28",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 256,
+      "duration_seconds": 23.248139,
+      "datetime": "Sat Jun  8 18:55:17 2024",
+      "retcode": 0
+    },
+    {
+      "id": "1687",
+      "scene": "matpreview",
+      "integrator": "erpt",
+      "n_steps": 512,
+      "duration_seconds": 40.662323,
+      "datetime": "Sat Jun  8 18:55:57 2024",
+      "retcode": 0
+    },
+    {
+      "id": "dbe3",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 1,
+      "duration_seconds": 1.189572,
+      "datetime": "Sat Jun  8 18:55:59 2024",
+      "retcode": 0
+    },
+    {
+      "id": "abd2",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 2,
+      "duration_seconds": 1.433426,
+      "datetime": "Sat Jun  8 18:56:00 2024",
+      "retcode": 0
+    },
+    {
+      "id": "8bc6",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 4,
+      "duration_seconds": 2.053328,
+      "datetime": "Sat Jun  8 18:56:02 2024",
+      "retcode": 0
+    },
+    {
+      "id": "899d",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 8,
+      "duration_seconds": 2.861244,
+      "datetime": "Sat Jun  8 18:56:05 2024",
+      "retcode": 0
+    },
+    {
+      "id": "c559",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 16,
+      "duration_seconds": 4.977936,
+      "datetime": "Sat Jun  8 18:56:10 2024",
+      "retcode": 0
+    },
+    {
+      "id": "c081",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 32,
+      "duration_seconds": 8.019222,
+      "datetime": "Sat Jun  8 18:56:18 2024",
+      "retcode": 0
+    },
+    {
+      "id": "1f04",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 64,
+      "duration_seconds": 15.349614,
+      "datetime": "Sat Jun  8 18:56:33 2024",
+      "retcode": 0
+    },
+    {
+      "id": "7bbc",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 128,
+      "duration_seconds": 29.77387,
+      "datetime": "Sat Jun  8 18:57:03 2024",
+      "retcode": 0
+    },
+    {
+      "id": "53ca",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 256,
+      "duration_seconds": 59.132594,
+      "datetime": "Sat Jun  8 18:58:02 2024",
+      "retcode": 0
+    },
+    {
+      "id": "8dd0",
+      "scene": "matpreview",
+      "integrator": "sppm",
+      "n_steps": 512,
+      "duration_seconds": 115.646067,
+      "datetime": "Sat Jun  8 18:59:58 2024",
+      "retcode": 0
+    },
+    {
+      "id": "2808",
+      "scene": "matpreview",
+      "integrator": "bdpt",
+      "n_steps": 4096,
+      "duration_seconds": 265.339037,
+      "datetime": "Sat Jun  8 19:07:36 2024",
+      "retcode": 0
     }
   ]
 }
