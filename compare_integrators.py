@@ -2,6 +2,7 @@ from metrics import read_exr, calculate_mse
 import itertools
 import json
 import matplotlib.pyplot as plt
+import numpy as np
 
 scenes = ['cbox', 'torus', 'veach_bidir', 'veach_mi', 'medium']
 integrators = ['path', 'volpath', 'bdpt', 'pssmlt', 'mlt', 'erpt', 'sppm']
@@ -19,23 +20,27 @@ def read_images_and_duration(scene, integrator):
 
 color_map = plt.get_cmap('tab10', len(integrators))
 for scene in scenes:
-    # X = list()
-    # Y = list()
+    All_X = list()
+    All_Y = list()
     # G = list()
     standard_image = read_exr(f'./exr/{scene}.standard.exr')
-    plt.figure(figsize=(32, 64))
+    plt.figure(figsize=(16, 32))
     for group_idx, integrator in enumerate(integrators):
         current_images_and_duration = read_images_and_duration(scene, integrator)
         duration_and_mse = [(p[1], calculate_mse(p[0], standard_image)) for p in current_images_and_duration]
+        duration_and_mse = [p for p in duration_and_mse if not np.isnan(p[1])]
         X = [p[0] for p in duration_and_mse]
         Y = [p[1] for p in duration_and_mse]
         G = [group_idx for p in duration_and_mse]
         plt.plot(X, Y, marker='o', label=integrator)
+        All_X += X
+        All_Y += Y
     # plt.colorbar(label="Integrators")
     plt.legend(title='Integrators', loc='lower left')
     plt.xlabel('Duration (seconds)')
     plt.ylabel('MSE')
-    plt.ylim(0, 0.003)
+    # plt.xlim(0, np.median(All_X))
+    plt.ylim(0, np.median(All_Y))
     plt.savefig(f'./saved_pics/{scene}.png')
     plt.close()
 
