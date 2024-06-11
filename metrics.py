@@ -50,38 +50,39 @@ def calculate_psnr(image1, image2):
     max_pixel = 1.0  
     psnr = 20 * np.log10(max_pixel / np.sqrt(mse))
     return psnr
-
-# Paths to the EXR files
-base_path = f'exr/{name}.'
-label_image_path = f'exr/{args.scene}.standard.exr'
-label_image = read_exr(label_image_path)
-
-mse_values = []
-psnr_values = []
-image_indices = [2 ** i for i in range(0, 10)]
-
-for i in image_indices:
-    image_path = base_path + f'{i}.exr'
-    image = read_exr(image_path)
-    mse = calculate_mse(label_image, image)
-    psnr = calculate_psnr(label_image, image)
-    mse_values.append(mse)
-    psnr_values.append(psnr)
-
-# Plotting the MSE and PSNR curves
-plt.figure(figsize=(12, 6))
-
-plt.subplot(1, 2, 1)
-plt.plot(image_indices, mse_values, marker='o', linestyle='-', color='b')
-plt.xlabel('Image Index')
-plt.ylabel('MSE')
-plt.title('MSE Curve')
-
-plt.subplot(1, 2, 2)
-plt.plot(image_indices, psnr_values, marker='o', linestyle='-', color='r')
-plt.xlabel('Image Index')
-plt.ylabel('PSNR (dB)')
-plt.title('PSNR Curve')
-
-plt.tight_layout()
-plt.savefig(f'saved_pics/{name}_metrics.png')
+if __name__ == '__main__':
+    # Paths to the EXR files
+    base_path = f'exr/{name}.'
+    label_image_path = f'exr/{args.scene}.standard.exr'
+    label_image = read_exr(label_image_path)
+    
+    mse_values = []
+    psnr_values = []
+    image_indices = [2 ** i for i in range(0, 10)]
+    
+    for i in image_indices:
+        image_path = base_path + f'{i}.exr'
+        image = read_exr(image_path)
+        mse = calculate_mse(label_image, image)
+        psnr = calculate_psnr(label_image, image)
+        mse_values.append(mse)
+        psnr_values.append(psnr)
+    
+    # Plotting the MSE and PSNR curves
+    plt.figure(figsize=(12, 6))
+    
+    plt.subplot(1, 2, 1)
+    plt.plot(image_indices, mse_values, marker='o', linestyle='-', color='b')
+    plt.xlabel('Image Index')
+    plt.ylabel('MSE')
+    plt.title('MSE Curve')
+    
+    plt.subplot(1, 2, 2)
+    plt.plot(image_indices, psnr_values, marker='o', linestyle='-', color='r')
+    plt.xlabel('Image Index')
+    plt.ylabel('PSNR (dB)')
+    plt.title('PSNR Curve')
+    
+    plt.tight_layout()
+    plt.savefig(f'saved_pics/{name}_metrics.png')
+    
