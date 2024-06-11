@@ -13,11 +13,12 @@ import datetime
 
 # scenes and integrator for rendering the reference image
 # scenes = [('cbox', 'path'), ('veach_bidir', 'path')]
-scenes = [('veach_bidir', 'path')]
+scenes = ['cbox', 'torus', 'veach_bidir', 'veach_mi', 'medium']
+scenes = scenes[2:]
 
 
 integrators = ['path', 'volpath', 'bdpt', 'pssmlt', 'mlt', 'erpt', 'sppm']
-# integrators = integrators[6:]
+# integrators = integrators[3:]
 # integrators = ['sppm']
 # good_integrators = ['path', 'volpath']
 
@@ -56,7 +57,7 @@ def run_once(scene, integrator, n_steps):
     while retcode != 0 and count <= 10:
         # usage_start = resource.getrusage(resource.RUSAGE_CHILDREN)
         start_time = datetime.datetime.now()
-        result = subprocess.run('docker run --memory=48g --cpus=24 --mount type=bind,source=./{},target=/app wgr/mitsuba-conda-clang-o2 mitsuba -p 24 -L error /app/{}.xml'.format(scene, scene), shell=True, executable="/bin/bash")
+        result = subprocess.run('docker run --memory=48g --mount type=bind,source=./{},target=/app wgr/mitsuba-conda-clang-o2 mitsuba -p 24 -L error /app/{}.xml'.format(scene, scene), shell=True, executable="/bin/bash")
         end_time = datetime.datetime.now()
         # usage_end = resource.getrusage(resource.RUSAGE_CHILDREN)
         retcode = result.returncode 
@@ -66,11 +67,11 @@ def run_once(scene, integrator, n_steps):
     # stime = usage_end.ru_stime - usage_start.ru_stime
     insert_time_usage_log(scene, integrator, n_steps, (end_time - start_time).total_seconds(), retcode)
 
-
-# run_once('cbox', 'path', 1)
-for scene, ref_interator in scenes:
-    # run_once(scene, ref_interator, -1)
-    for integrator in integrators:
-        # run_once(scene, integrator, -1)
-        for i in range(0, 10):
-            run_once(scene, integrator, 2**i)
+if __name__ == '__main__':
+    # run_once('cbox', 'path', 1)
+    for scene in scenes:
+        # run_once(scene, ref_interator, -1)
+        for integrator in integrators:
+            # run_once(scene, integrator, -1)
+            for i in range(0, 10):
+                run_once(scene, integrator, 2**i)
