@@ -1,10 +1,10 @@
-from metrics import read_exr, calculate_mse
+from metrics import read_png, calculate_mse
 import itertools
 import json
 import matplotlib.pyplot as plt
 import numpy as np
 
-scenes = ['cbox', 'torus', 'veach_bidir', 'veach_mi', 'medium']
+scenes = ['ball', 'cbox', 'torus', 'veach_bidir', 'veach_mi', 'medium', 'glass', 'bathroom']
 integrators = ['path', 'volpath', 'bdpt', 'pssmlt', 'mlt', 'erpt', 'sppm']
 
 duration = dict()
@@ -15,7 +15,7 @@ with open('./log-server/db.json', 'r') as file:
 
 def read_images_and_duration(scene, integrator):
     indicies = [2 ** i for i in range(0, 10)]
-    return [(read_exr(f'./exr/{scene}_{integrator}.{index}.exr'), duration[(scene, integrator, index)]) for index in indicies]
+    return [(read_png(f'./exr/{scene}_{integrator}.{index}.png'), duration[(scene, integrator, index)]) for index in indicies]
 
 
 color_map = plt.get_cmap('tab10', len(integrators))
@@ -23,8 +23,9 @@ for scene in scenes:
     All_X = list()
     All_Y = list()
     # G = list()
-    standard_image = read_exr(f'./exr/{scene}.standard.exr')
-    plt.figure(figsize=(16, 32))
+    standard_image = read_png(f'./exr/{scene}.standard.png')
+    plt.figure(figsize=(8, 16))
+    plt.title(f'Scene = {scene}')
     for group_idx, integrator in enumerate(integrators):
         current_images_and_duration = read_images_and_duration(scene, integrator)
         duration_and_mse = [(p[1], calculate_mse(p[0], standard_image)) for p in current_images_and_duration]
@@ -36,11 +37,14 @@ for scene in scenes:
         All_X += X
         All_Y += Y
     # plt.colorbar(label="Integrators")
-    plt.legend(title='Integrators', loc='lower left')
+    All_X = np.array(All_X)
+    All_Y = np.array(All_Y)
+    plt.legend(title='Integrators', loc='lower right')
     plt.xlabel('Duration (seconds)')
     plt.ylabel('MSE')
     # plt.xlim(0, np.median(All_X))
     plt.ylim(0, np.median(All_Y))
+    plt.xlim(0, np.max(All_X[All_Y <= np.median(All_Y)]))
     plt.savefig(f'./saved_pics/{scene}.png')
     plt.close()
 

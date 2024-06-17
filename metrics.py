@@ -5,6 +5,7 @@ import imageio
 import matplotlib.pyplot as plt
 import argparse
 import os
+from PIL import Image
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--scene', type=str, default='cbox')
@@ -35,12 +36,21 @@ def read_exr(file_path):
     image = np.stack([red, green, blue], axis=2)
     return image
 
+def read_png(file_path):
+    file_path = os.path.realpath(file_path)
+    image = Image.open(file_path)
+    image_array = np.array(image)
+    return image_array
+
 def apply_gamma_correction(image, gamma=2.2):
     """Applies gamma correction to the image."""
     return np.power(image, 1.0 / gamma)
 
 def calculate_mse(image1, image2):
     mse = np.mean((image1 - image2) ** 2)
+    # if np.isnan(mse):
+    #     print(image1)
+    #     print(image2)
     return mse
 
 def calculate_psnr(image1, image2):
@@ -55,11 +65,11 @@ if __name__ == '__main__':
     base_path = f'exr/{name}.'
     label_image_path = f'exr/{args.scene}.standard.exr'
     label_image = read_exr(label_image_path)
-    
+
     mse_values = []
     psnr_values = []
     image_indices = [2 ** i for i in range(0, 10)]
-    
+
     for i in image_indices:
         image_path = base_path + f'{i}.exr'
         image = read_exr(image_path)
@@ -67,22 +77,21 @@ if __name__ == '__main__':
         psnr = calculate_psnr(label_image, image)
         mse_values.append(mse)
         psnr_values.append(psnr)
-    
+
     # Plotting the MSE and PSNR curves
     plt.figure(figsize=(12, 6))
-    
+
     plt.subplot(1, 2, 1)
     plt.plot(image_indices, mse_values, marker='o', linestyle='-', color='b')
     plt.xlabel('Image Index')
     plt.ylabel('MSE')
     plt.title('MSE Curve')
-    
+
     plt.subplot(1, 2, 2)
     plt.plot(image_indices, psnr_values, marker='o', linestyle='-', color='r')
     plt.xlabel('Image Index')
     plt.ylabel('PSNR (dB)')
     plt.title('PSNR Curve')
-    
+
     plt.tight_layout()
     plt.savefig(f'saved_pics/{name}_metrics.png')
-    

@@ -13,11 +13,12 @@ import datetime
 
 # scenes and integrator for rendering the reference image
 # scenes = [('cbox', 'path'), ('veach_bidir', 'path')]
-scenes = ['cbox', 'torus', 'veach_bidir', 'veach_mi', 'medium']
-scenes = scenes[2:]
+scenes = ['cbox', 'torus', 'veach_bidir', 'veach_mi', 'medium', 'glass']
+scenes = ['ball']
 
 
 integrators = ['path', 'volpath', 'bdpt', 'pssmlt', 'mlt', 'erpt', 'sppm']
+integrators = ['path', 'bdpt', 'pssmlt', 'mlt', 'erpt', 'sppm', 'volpath']
 # integrators = integrators[3:]
 # integrators = ['sppm']
 # good_integrators = ['path', 'volpath']
@@ -62,7 +63,7 @@ def run_once(scene, integrator, n_steps):
         # usage_end = resource.getrusage(resource.RUSAGE_CHILDREN)
         retcode = result.returncode 
         count = count + 1
-    subprocess.run('mv -f ./{}/{}.exr ./output/{}_{}.{}.exr'.format(scene, scene, scene, integrator, n_steps), shell=True, executable="/bin/bash")
+    subprocess.run('mv -f ./{}/{}.png ./output/{}_{}.{}.png'.format(scene, scene, scene, integrator, n_steps), shell=True, executable="/bin/bash")
     # utime = usage_end.ru_utime - usage_start.ru_utime
     # stime = usage_end.ru_stime - usage_start.ru_stime
     insert_time_usage_log(scene, integrator, n_steps, (end_time - start_time).total_seconds(), retcode)
