@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<scene version="0.6.0">
+    <!-- Define integrator (how light transport is simulated) -->
+	<integrator type="mlt">
+		<integer name="maxPasses" value="64"/>
+        <!-- Number of samples per pixel -->
+        <!-- <integer name="maxDepth" value="5"/> -->
+    </integrator>
+
+    <!-- Define camera (pinhole camera) -->
+    <sensor type="perspective">
+        <!-- Camera position and orientation -->
+        <transform name="toWorld">
+            <lookat origin="0, 0, 5" target="0, 0, 0" up="0, 1, 0"/>
+        </transform>
+        <!-- Film (image) dimensions and resolution -->
+        <float name="fov" value="30"/>
+        <film type="ldrfilm">
+        </film>
+		<sampler type="independent">
+			<integer name="sampleCount" value="64"/>
+		</sampler>
+    </sensor>
+
+    <!-- Define point light -->
+    <emitter type="point">
+        <!-- Position of the point light -->
+        <transform name="toWorld">
+            <translate x="0" y="3" z="3"/>
+        </transform>
+        <!-- Light intensity -->
+        <spectrum name="intensity" value="300"/>
+    </emitter>
+
+    <!-- Define glass material -->
+    <shape type="rectangle">
+        <!-- Rectangle dimensions and position -->
+        <transform name="toWorld">
+            <scale x="4" y="4" z="1"/>
+            <translate x="0" y="0" z="-0.5"/>
+        </transform>
+        <!-- Specify the material (glass) -->
+        <bsdf type="dielectric">
+            <!-- Index of refraction (IOR) of glass -->
+            <float name="intIOR" value="1.5"/>
+            <float name="extIOR" value="1.0"/>
+        </bsdf>
+    </shape>
+
+    <!-- Define multiple diffuse surfaces with different shapes -->
+    <shape type="rectangle">
+        <!-- Rectangle dimensions and position -->
+        <transform name="toWorld">
+            <scale x="3" y="3" z="1"/>
+            <translate x="-1.5" y="0" z="-1.0"/>
+        </transform>
+        <!-- Specify the diffuse material -->
+        <bsdf type="diffuse">
+            <!-- Diffuse surface color -->
+            <spectrum name="reflectance" value="0.8, 0.1, 0.1"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <!-- Sphere position and radius -->
+        <float name="radius" value="0.7"/>
+        <transform name="toWorld">
+            <translate x="1.5" y="0" z="-1.0"/>
+        </transform>
+        <!-- Specify the diffuse material -->
+        <bsdf type="diffuse">
+            <!-- Diffuse surface color -->
+            <spectrum name="reflectance" value="0.1, 0.8, 0.1"/>
+        </bsdf>
+    </shape>
+
+    <shape type="sphere">
+        <!-- Sphere position and radius -->
+        <float name="radius" value="0.7"/>
+        <transform name="toWorld">
+            <translate x="0" y="0" z="-1.0"/>
+        </transform>
+        <!-- Specify the diffuse material -->
+        <bsdf type="diffuse">
+            <!-- Diffuse surface color -->
+            <spectrum name="reflectance" value="0.1, 0.1, 0.8"/>
+        </bsdf>
+    </shape>
+</scene>
