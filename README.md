@@ -3,7 +3,7 @@
 ## 第一步：构建Mitsuba Docker镜像
 基于 https://github.com/Traverse-Research/mitsuba-conda-docker 提供的Dockerfile，构建Mitsuba Docker镜像。
 
-我们实际运行后发现，默认使用GCC并开启O1或更高优化选项编译得到的Mitsuba运行经常崩溃。经过排查，我们猜测这是Mitsuba使用了C++的UB（未定义行为），而GCC的编译优化处理UB时比较激进。我们修改了Mitsuba编译脚本，换用LLVM编译器（参见https://github.com/wgr45097/mitsuba/tree/scons-python3），使用O2编译优化选项，问题得到解决。
+我们实际运行后发现，默认使用GCC并开启O1或更高优化选项编译得到的Mitsuba运行经常崩溃。经过排查，我们猜测这是Mitsuba使用了C++的UB（未定义行为），而GCC的编译优化处理UB时比较激进。我们修改了Mitsuba编译脚本，换用LLVM编译器（参见 https://github.com/wgr45097/mitsuba/tree/scons-python3 ），使用O2编译优化选项，问题得到解决。
 
 ## 第二步：启动JSON Server
 ```bash
